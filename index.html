@@ -220,7 +220,18 @@
 		<div class="title"> <i class="icon fa fa-graduation-cap" aria-hidden="true"></i> <b> References </b> <hr></div>
 		<div class="description"> <b>Dragoș Păun</b>  (+40) 737 784 323 | <a href="mailto:dragos.petre.paun@gmail.com" style="color: red">dragos.petre.paun@gmail.com</a></div>
 		<div class="description" style="margin-bottom: 4%"> <b>Cristian Bădoi</b> (+40) 773 723 062 | <a href="mailto:sgcbadoi@liverpool.ac.uk" style="color: red">sgcbadoi@liverpool.ac.uk </a></div>
+<!-- Trigger/Open The Modal -->
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div align="center" class="modal-content">
+    <span class="close">&times;</span>
+
+    <img id="preview" src="" class="modal-image"/>
+  </div>
+
+</div>
 	</div>
 
 <script type="text/javascript">
@@ -238,7 +249,6 @@ $(document).ready(function(){
 $( document ).ready(function(){
   $(".account-bar").each(function(){
   	var elem = $(this);
-  	console.log(parseInt(elem.find(".account-bar-next-level").text()));
   elem.find(".xp-increase-fx").css("display","inline-block");
   elem.find(".xp-bar-fill").css("box-shadow",/*"0px 0px 15px #06f,*/ "-5px 0px 10px #fff inset");
   setTimeout(function(){elem.find(".xp-bar-fill").css("-webkit-transition","all 2s ease");
@@ -248,6 +258,41 @@ $( document ).ready(function(){
  });
 });
 
+
+
+
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = $("img");
+
+$("img").on("click",function(elm) {
+	console.log(elm);
+    modal.style.display = "block";
+    $('#preview').attr("src",elm.target.src);
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 </script>

@@ -331,3 +331,52 @@ a{
 	max-width: 19%;
 
 }
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content/Box */
+.modal-content {
+	position: absolute;
+	left: 15%;
+	top:  15%;
+	width: 70%;
+	height: 70%
+	background-color: rgba(0,0,0,0);
+}
+
+
+.modal-image {
+	position: relative;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
